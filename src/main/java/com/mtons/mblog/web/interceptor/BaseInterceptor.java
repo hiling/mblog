@@ -10,6 +10,7 @@
 package com.mtons.mblog.web.interceptor;
 
 import com.mtons.mblog.modules.hook.interceptor.InterceptorHookManager;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
@@ -34,6 +35,32 @@ public class BaseInterceptor extends HandlerInterceptorAdapter {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		interceptorHookManager.preHandle(request, response, handler);
+		String url = request.getRequestURL().toString();
+
+		if (url.endsWith("default.aspx")) {
+			response.setStatus(301);
+			response.setHeader("Location", "/");
+			return false;
+		}
+
+		if (url.endsWith("category.aspx")) {
+			response.setStatus(301);
+			response.setHeader("Location", "/channel/" + StringUtils.substring(request.getQueryString(),3));
+			return false;
+		}
+
+		if (url.endsWith("article.aspx")) {
+			response.setStatus(301);
+			response.setHeader("Location", "/post/" + StringUtils.substring(request.getQueryString(),3));
+			return false;
+		}
+
+		int index = url.indexOf("/article/");
+		if (index > 0) {
+			response.setStatus(301);
+			response.setHeader("Location", "/post/" + StringUtils.substring(url, index + 9, url.indexOf("/", index + 9)));
+			return false;
+		}
 		return true;
 	}
 	@Override

@@ -275,6 +275,14 @@
 				<profileActive>h2</profileActive>
 			</properties>
 		</profile>
+
+		<!--生产环境-->
+		<profile>
+			<id>prd</id>
+			<properties>
+				<profileActive>prd</profileActive>
+			</properties>
+		</profile>
 	</profiles>
 
 	<build>
