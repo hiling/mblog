@@ -61,6 +61,10 @@ logging:
     level:
         org.springframework: WARN
         org.hibernate: WARN
+    file:
+        max-history: 10
+        max-size: 10M
+
 
 # site.options.theme: [default|classic]
 site:

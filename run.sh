@@ -1,5 +1,5 @@
 #!/bin/bash
-APP_NAME=mblog-latest.jar
+APP_NAME=mblog.jar
 
 usage() {
     echo "case: sh run.sh [start|stop|restart|status]"

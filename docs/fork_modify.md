@@ -66,3 +66,8 @@ site:
     -->
 <meta name="mtons:mblog" content="${site.version}">
 ```
+
+### 打包
+```bash
+mvn clean package -Dmaven.test.skip=true -Pprd
+```
