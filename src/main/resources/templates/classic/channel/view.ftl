@@ -8,7 +8,7 @@
 <div class="row main">
     <div class="col-xs-12 col-md-9 side-left topics-show">
         <!-- view show -->
-        <div class="topic panel panel-default">
+        <div class="panel panel-default">
             <div class="infos panel-heading">
                 <h1 class="panel-title topic-title">${view.title}</h1>
                 <div class="meta inline-block">
@@ -39,11 +39,7 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-            <div class="more-box">
-                <a class="btn btn-fulltext" data-toggle="fulltext">
-                    <i class="icon icon-arrow-down" aria-hidden="true"></i> 阅读全部
-                </a>
-            </div>
+
         </div>
 
         <!-- Comments -->
