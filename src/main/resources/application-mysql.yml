@@ -4,9 +4,9 @@ spring:
         #continue-on-error: false
         #sql-script-encoding: utf-8
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost/db_mblog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
-        username: root
-        password: root
+        url: jdbc:mysql://49.232.140.73:3306/minicloud_dev?useUnicode=true&characterEncoding=utf8&useSSL=false
+        username: dev
+        password: MN-SOFT.com8519
     flyway:
         enabled: true
     jpa:

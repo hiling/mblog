@@ -45,6 +45,8 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
                 .addResourceLocations(location + "/storage/avatars/");
         registry.addResourceHandler("/storage/thumbnails/**")
                 .addResourceLocations(location + "/storage/thumbnails/");
+        registry.addResourceHandler("/files/**")
+                .addResourceLocations(location + "/files/");
     }
 
     @Override

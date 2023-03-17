@@ -8,7 +8,7 @@ server:
         directBuffers: true
 spring:
     profiles:
-        active: mysql
+        active: prd
     devtools:
         enabled: true
     cache:
